@@ -1,3 +1,4 @@
+erDiagram
     USUARIO {
         int usuario_id PK
         string nombre
