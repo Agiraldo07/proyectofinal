@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrarse - Spa de Uñas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <header>
-        <h1>Bienvenidos a Marcela Llanos Spa</h1>
+        <!-- Imagen de logo -->
+        <img src="../recursos/logo.png" class="logo">
+        <h1>Bienvenidos</h1>
         <div class="auth-buttons">
             <a href="login.html" class="login-btn">Iniciar Sesión</a>
             <a href="register.html" class="register-btn">Registrarse</a>
@@ -17,7 +20,7 @@
 
     <main>
         <div class="auth-container">
-            <h2>Registrarse</h2>
+            <h2>Registro</h2>
             <form action="/register" method="POST">
                 <label for="name">Nombre Completo:</label>
                 <input type="text" id="name" name="name" required>
@@ -29,7 +32,7 @@
                 <input type="password" id="password" name="password" required>
 
                 <button type="submit" class="submit-btn">Registrarse</button>
-                <a href="index.html" class="back-btn">Regresar a Inicio</a>
+                <a href="index.html" class="back-btn">Regresar al Inicio</a>
             </form>
         </div>
     </main>

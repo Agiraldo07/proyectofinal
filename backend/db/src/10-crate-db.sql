@@ -28,9 +28,9 @@ CREATE TABLE HORARIO_DISPONIBLE (
 
 CREATE TABLE CITA (
     cita_id SERIAL PRIMARY KEY,
-    cliente_id INT REFERENCES USUARIO(usuario_id) ON DELETE CASCADE,
-    servicio_id INT REFERENCES SERVICIO(servicio_id) ON DELETE CASCADE,
-    horario_id INT REFERENCES HORARIO_DISPONIBLE(horario_id) ON DELETE CASCADE,
+    cliente_id INTEGER REFERENCES USUARIO(usuario_id) ON DELETE CASCADE,
+    servicio_id INTEGER REFERENCES SERVICIO(servicio_id) ON DELETE CASCADE,
+    horario_id INTEGER REFERENCES HORARIO_DISPONIBLE(horario_id) ON DELETE CASCADE,
     fecha_hora TIMESTAMP NOT NULL,
     estado VARCHAR(50) CHECK (estado IN ('pendiente', 'confirmada', 'cancelada', 'completada')), -- Cambia según tus estados
     notas TEXT

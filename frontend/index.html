@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spa de Uñas</title>
+    <!-- Enlace a Google Fonts para la fuente "Big Shoulders Display" -->
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     <header>
-        <h1>Bienvenidos a Marcela Llanos Spa</h1>
+        <!-- Imagen de logo arriba del texto -->
+        <img src="../recursos/logo.png" class="logo">
+        <h1>Bienvenidos</h1>
         <div class="auth-buttons">
             <a href="login.html" class="login-btn">Iniciar Sesión</a>
             <a href="register.html" class="register-btn">Registrarse</a>
@@ -17,18 +21,55 @@
     
     <main>
         <section class="appointment-section">
-            <h2>Agenda tu cita</h2>
-            <button class="appointment-btn feet-btn">
-                <span class="btn-text">Cita para Pies</span>
-            </button>
-            <button class="appointment-btn hands-btn">
-                <span class="btn-text">Cita para Manos</span>
-            </button>
+            <div class="button-container">
+                <button class="appointment-btn">Citas</button>
+                <button class="appointment-btn" onclick="mostrarServicio()">Servicios</button>
+                <button class="appointment-btn" onclick="mostrarDisenos()">Diseños</button>
+            </div>
+        </section>
+
+        <!-- Sección de Imagen de Servicios Oculta -->
+        <section id="servicio-section" class="hidden">
+            <img src="../recursos/precios1.jpeg" alt="Servicio" class="servicio-img">
+        </section>
+
+        <!-- Sección de Imágenes de Diseños Oculta -->
+        <section id="disenos-section" class="hidden">
+            <div class="image-gallery">
+                <img src="../recursos/foto1.jpeg" alt="Diseño 1" class="diseno-img">
+                <img src="../recursos/foto2.jpeg" alt="Diseño 2" class="diseno-img">
+                <img src="../recursos/foto3.jpeg" alt="Diseño 3" class="diseno-img">
+                <img src="../recursos/foto4.jpeg" alt="Diseño 4" class="diseno-img">
+                <img src="../recursos/foto5.jpeg" alt="Diseño 5" class="diseno-img">
+                <img src="../recursos/foto6.jpeg" alt="Diseño 6" class="diseno-img">
+                <img src="../recursos/foto7.jpeg" alt="Diseño 7" class="diseno-img">
+                <img src="../recursos/foto8.jpeg" alt="Diseño 8" class="diseno-img">
+
+            </div>
         </section>
     </main>
     
     <footer>
         <p>© 2024 Spa de Uñas. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function mostrarServicio() {
+            // Seleccionar la sección de servicios
+            const servicioSection = document.getElementById('servicio-section');
+            
+            // Alternar la clase 'hidden' para mostrar u ocultar la imagen
+            servicioSection.classList.toggle('hidden');
+        }
+
+        function mostrarDisenos() {
+            // Seleccionar la sección de diseños
+            const disenosSection = document.getElementById('disenos-section');
+            
+            // Alternar la clase 'hidden' para mostrar u ocultar las imágenes
+            disenosSection.classList.toggle('hidden');
+        }
+    </script>
 </body>
 </html>

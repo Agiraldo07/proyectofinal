@@ -1,39 +1,58 @@
+css
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body Styles */
 body {
-    background-image: url('../../recursos/c0d64ced-3ccd-4bc3-ad60-8f212f670888.JPG');
+    background-image: url('../../recursos/fondo2.jpeg'); /* Imagen de fondo */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    font-family: Arial, sans-serif;
-    color: #333;
+    font-family: 'Big Shoulders Display', sans-serif; /* Fuente aplicada */
+    color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     margin: 0;
-    padding: 0;
+    padding: 20px;
 }
 
+/* Header Styles */
 header {
-    background-color: rgba(255, 182, 193, 0.9);
     width: 100%;
     padding: 20px;
     text-align: center;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px; /* Reducido el margen inferior */
 }
 
+/* Logo */
+.logo {
+    width: 400px; /* Tamaño del logo */
+    height: 300px;
+    object-fit: contain; /* Ajustar la imagen al contenedor */
+    margin-bottom: 1px; /* Reducido el espacio entre la imagen y el texto */
+}
+
+/* Título */
 header h1 {
-    font-size: 2rem;
-    color: #333;
+    font-family: 'Big Shoulders Display', sans-serif; /* Fuente aplicada */
+    font-size: 2.5rem;
+    color: black;
+    margin-top: 2px; /* Reducido el espacio entre el título y el logo */
 }
 
+/* Auth Buttons (Iniciar sesión y Registrarse) */
 .auth-buttons {
     position: absolute;
     top: 20px;
@@ -43,22 +62,22 @@ header h1 {
 }
 
 .login-btn, .register-btn {
-    padding: 10px 20px;
+    padding: 15px 30px; /* Aumentado el tamaño del botón */
+    font-size: 1.2rem; /* Aumentado el tamaño de la fuente */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1rem;
     text-decoration: none;
     transition: background-color 0.3s;
 }
 
 .login-btn {
-    background-color: #87cefa;
+    background-color: #ff69b4;
 }
 
 .login-btn:hover {
-    background-color: #1e90ff;
+    background-color: #ff1493;
 }
 
 .register-btn {
@@ -69,110 +88,144 @@ header h1 {
     background-color: #ff1493;
 }
 
-.appointment-section {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.appointment-section h2 {
-    font-size: 1.8rem;
-    color: #333;
-    margin-bottom: 20px;
-}
-
-.appointment-btn {
-    width: 90%;
-    max-width: 400px;
-    height: 200px;
-    margin: 20px 0;
-    color: white;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s;
-}
-
-.appointment-btn:hover {
-    transform: scale(1.05);
-}
-
-.feet-btn {
-    background-image: url('path/to/feet-image.jpg');
-}
-
-.hands-btn {
-    background-image: url('path/to/hands-image.jpg');
-}
-
+/* Formulario de Iniciar sesión */
 .auth-container {
-    width: 90%;
+    width: 100%;
     max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
+    padding: 50px;
+    background-color: #EB81C1; /* Fondo translúcido */
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
     text-align: center;
 }
 
 .auth-container h2 {
+    font-size: 2rem;
+    color: black;
     margin-bottom: 20px;
-    color: #333;
 }
 
 .auth-container label {
     display: block;
-    text-align: left;
-    margin-top: 10px;
-    font-weight: bold;
-    color: #666;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: black;
 }
 
 .auth-container input {
     width: 100%;
     padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
+    margin: 10px 0;
+    border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1rem;
+    background-color: #f9f9f9;
 }
 
-.submit-btn {
+.auth-container input:focus {
+    border-color: black;
+}
+
+/* Botón de envío en el formulario de login */
+.auth-container .submit-btn {
+    padding: 15px 30px;
     width: 100%;
-    padding: 10px;
     background-color: #ff69b4;
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 1rem;
     cursor: pointer;
-    margin-top: 20px;
+    font-size: 1.2rem;
     transition: background-color 0.3s;
 }
 
-.submit-btn:hover {
+.auth-container .submit-btn:hover {
     background-color: #ff1493;
 }
 
-.back-btn {
-    display: inline-block;
-    margin-top: 15px;
-    font-size: 0.9rem;
-    color: #666;
+/* Enlace para regresar al inicio en el formulario */
+.auth-container .back-btn {
+    display: block;
+    margin-top: 10px;
+    font-size: 2rem;
     text-decoration: none;
-    transition: color 0.3s;
+    color: white;
+    text-align: center;
 }
 
-.back-btn:hover {
-    color: #333;
+.auth-container .back-btn:hover {
+    color: black;
+}
+
+/* Footer Styles */
+footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 0.9rem;
+    color: black;
+}
+
+/* Styles for Index Page Buttons (Citas, Servicios, Diseños) */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.appointment-btn {
+    width: 300px;
+    height: 50px;
+    background-color: #EB81C1;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-btn:hover {
+    transform: scale(1.05);
+    background-color: #D06FA9;
+}
+
+/* Estilos para la galería de imágenes */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.diseno-img,
+.servicio-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.diseno-img:hover,
+.servicio-img:hover {
+    transform: scale(1.1);
+}
+
+/* Ocultar las secciones inicialmente */
+.hidden {
+    display: none;
 }

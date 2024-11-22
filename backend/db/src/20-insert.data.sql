@@ -68,5 +68,4 @@ INSERT INTO CITA (cliente_id, servicio_id, horario_id, fecha_hora, estado, notas
 (11, 6, 12, '2024-11-04 16:00', 'cancelada', 'Uñas acrílicas'),
 (12, 1, 13, '2024-11-05 09:00', 'confirmada', 'Corte de uñas'),
 (13, 2, 14, '2024-11-05 10:00', 'pendiente', 'Esmaltado simple'),
-(14, 3, 15, '2024-11-05 11:00', 'confirmada', 'Esmaltado gel'),
-(15, 4, 16, '2024-11-05 12:00', 'cancelada', 'Manicura completa');
+(14, 3, 15, '2024-11-05 11:00', 'confirmada', 'Esmaltado gel');
